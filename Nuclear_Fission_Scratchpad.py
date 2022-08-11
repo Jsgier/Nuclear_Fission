@@ -23,6 +23,15 @@ N = lambda rho,M : N_A*rho / M
 #mfp - mean free path
 mfp = lambda N, sigma: 1 / (N*sigma)
 
+#Breit-Wigner formula
+#sigma_a - absorption cross section, which approximates cross section of
+#compound nucleus
+#E_n - kinetic engergy of incident neutron
+#E_o - neutron energy at resonance
+#v - velocity of incident neutron
+#C - constant specific to resonance
+#gamma - width for the resonance level (kind of like quality facotor in RF)
+sigma_a = lambda C,v,E_n, E_o, gamma: (C/v) / ((E_n -E_o)**2 + (gamma**2/4))
 
 def main():
 
